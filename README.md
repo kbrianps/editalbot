@@ -22,7 +22,7 @@ Este é um chatbot baseado em LLM (Large Language Model), desenvolvido com **Gem
 ### Instalação
 
 ```bash
-git clone https://github.com/seu-usuario/chatbot-unirio-editais.git
+git clone https://github.com/kbrianps/chatbot-unirio-editais.git
 cd chatbot-unirio-editais
 python -m venv venv
 source venv/bin/activate  # No Windows: venv\Scripts\activate
