@@ -2,4 +2,4 @@
 **/.devcontainer/
 **/.streamlit/
 **/.venv/
-**/.env/
+**/.env
