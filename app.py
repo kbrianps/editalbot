@@ -36,7 +36,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar
-st.sidebar.image("static/logo2.png", width=200, use_container_width="True")
+st.sidebar.image("logo.png", width=200, use_container_width="True")
 st.sidebar.title("📑 Editais Disponíveis")
 
 # Exemplo: Você pode buscar os editais de um banco de dados ou de uma função
