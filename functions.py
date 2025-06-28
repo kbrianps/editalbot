@@ -1,4 +1,12 @@
 import streamlit as st
+import os
+from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
+
+url = os.getenv("SUPABASE_URL")
+key = os.getenv("SUPABASE_KEY")
 
 def map_role(role):
     if role == "model":
@@ -14,3 +22,12 @@ def get_available_editais():
     # Aqui você pode implementar a lógica para buscar os editais de um banco de dados ou API
     # Por enquanto, vamos usar uma lista fixa como exemplo
     return ['Edital 001/2025', 'Edital 002/2025', 'Edital 003/2025']    
+
+supabase: Client = create_client(url, key)
+
+def salvarMensagem(texto):
+    data = {
+        "texto": texto
+    }
+    resposta = supabase.table("mensagens").insert(data).execute()
+    return resposta

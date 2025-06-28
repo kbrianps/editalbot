@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import streamlit as st
 import streamlit.components.v1 as components
 import google.generativeai as gpt
-from functions import map_role, fetch_gemini_response, get_available_editais
+from functions import map_role, fetch_gemini_response, get_available_editais, salvarMensagem
 
 st.set_page_config(
     page_title="EditalBot - UNIRIO",
@@ -72,3 +72,7 @@ if user_input:
 
     st.session_state.chat_session.history.append({"role": "user", "content": user_input})
     st.session_state.chat_session.history.append({"role": "model", "content": gemini_response})
+
+    # Salvar mensagem do usuário
+    salvarMensagem(user_input)
+
