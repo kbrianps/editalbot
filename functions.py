@@ -27,7 +27,8 @@ supabase: Client = create_client(url, key)
 
 def salvarMensagem(texto):
     data = {
-        "texto": texto
+        "message": texto
     }
-    resposta = supabase.table("mensagens").insert(data).execute()
+    print("Enviando para o Supabase",data)
+    resposta = supabase.table("messages").insert(data).execute()
     return resposta
