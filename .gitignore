@@ -1,5 +1,117 @@
-**/__pycache__/
-**/.devcontainer/
+# ===== EDITALBOT PROJECT GITIGNORE =====
+
+# Arquivos de configuração sensíveis
+.env
+.env.local
+.env.development
+.env.production
+secrets.toml
+
+# Banco de dados
+*.db
+*.sqlite
+*.sqlite3
+editalbot.db
+editalbot_backup_*.db
+
+# Arquivos temporários do OAuth
+/tmp/streamlit_oauth_state_*
+streamlit_oauth_state_*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Ambientes virtuais
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Streamlit
+.streamlit/
 **/.streamlit/
-**/.venv/
-**/.env
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# DevContainers
+.devcontainer/
+**/.devcontainer/
+
+# Logs
+*.log
+logs/
+*.out
+
+# Backups
+*.bak
+backup_*
+*_backup
+
+# Arquivos temporários
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Jupyter Notebooks (caso sejam criados)
+.ipynb_checkpoints
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Arquivos do sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Arquivos de certificados (caso sejam usados)
+*.pem
+*.key
+*.crt
+*.p12
+
+# Uploads e arquivos de usuário
+uploads/
+user_data/
